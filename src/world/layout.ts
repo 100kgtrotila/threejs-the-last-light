@@ -46,14 +46,12 @@ export const WORLD_LAYOUT: WorldLayout = {
     lighthouse: { x: 0, z: -27 },
   },
   footprints: [
-    { id: 'lighthouse-base', center: { x: 0, z: -27 }, radius: 4, solid: true },
-    { id: 'grove-tree', center: { x: 25, z: 5 }, radius: 1, solid: true },
-    { id: 'cemetery-stone', center: { x: -24, z: -6 }, radius: 0.8, solid: true },
+    { id: 'lighthouse-base', center: { x: 0, z: -27 }, radius: 4.3, solid: true },
   ],
   corridors: [
     { id: 'central', from: { x: 0, z: 26 }, to: { x: 0, z: -20 }, width: 4 },
     { id: 'west', from: { x: 0, z: -2 }, to: { x: -16, z: -2 }, width: 4 },
     { id: 'east', from: { x: 0, z: 2 }, to: { x: 16, z: 2 }, width: 4 },
-    { id: 'shore', from: { x: 0, z: 26 }, to: { x: -7, z: 23 }, width: 4 },
+    { id: 'shore', from: { x: 0, z: 26 }, to: { x: -6.5, z: 23 }, width: 4 },
   ],
 }
