@@ -55,6 +55,23 @@ describe('atmosphere scene integration', () => {
     f.world.dispose()
   })
 
+  it('mounts the lighthouse lantern beside the front window with its light inside the glass', () => {
+    const f = fixture()
+    try {
+      const lighthouse = f.world.structures.get('lighthouse')
+      const lantern = f.scene.getObjectByName('lantern:lighthouse')
+      const glass = f.scene.getObjectByName('lantern-glass')
+      if (!lighthouse || !lantern || !(glass instanceof THREE.Mesh)) throw new Error('Missing lighthouse lantern assembly')
+      const light = lantern.children.find((object): object is THREE.PointLight => object instanceof THREE.PointLight)
+      if (!light) throw new Error('Missing lighthouse lantern light')
+      expect(lantern.position.x - lighthouse.position.x).toBeLessThan(-0.6)
+      expect(lantern.position.y).toBeLessThan(4.15)
+      expect(lantern.position.z - lighthouse.position.z).toBeGreaterThan(2.9)
+      expect(light.position.toArray()).toEqual(glass.position.toArray())
+      expect(lantern.getObjectByName('lantern-bracket')).toBeDefined()
+    } finally { f.atmosphere.dispose(); f.world.dispose() }
+  })
+
   it('calms fog and completes the timed restoration only after the gameplay event', () => {
     const f = fixture()
     try {

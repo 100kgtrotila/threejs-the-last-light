@@ -250,14 +250,22 @@ export class Atmosphere {
       if (!building) continue
       const lantern = new THREE.Group()
       lantern.name = `lantern:${placement.id}`
-      lantern.position.copy(building.position).add(new THREE.Vector3(placement.kind === 'lighthouse' ? 0 : -1.25, placement.kind === 'lighthouse' ? 4.15 : 2.4, placement.kind === 'lighthouse' ? 3.12 : 2.7))
+      const lighthouseSconce = placement.kind === 'lighthouse'
+      lantern.position.copy(building.position).add(new THREE.Vector3(lighthouseSconce ? -1.05 : -1.25, lighthouseSconce ? 3.1 : 2.4, lighthouseSconce ? 3.1 : 2.7))
       this.root.add(lantern)
       const material = new THREE.MeshStandardMaterial({ color: '#d2aa62', emissive: '#ffba59', emissiveIntensity: 2.2, roughness: 0.5 })
+      if (lighthouseSconce) {
+        const bracket = new THREE.Group()
+        bracket.name = 'lantern-bracket'
+        lantern.add(bracket)
+        meshes.box(bracket, 'lantern-bracket-plate', iron, [0.22, 0.34, 0.07], [0, 0, -0.32])
+        meshes.box(bracket, 'lantern-bracket-arm', iron, [0.07, 0.07, 0.3], [0, 0, -0.14])
+      }
       meshes.box(lantern, 'lantern-glass', material, [0.21, 0.38, 0.2], [0, 0, 0])
       for (const y of [-0.24, 0.24]) meshes.box(lantern, 'lantern-cap', iron, [0.33, 0.1, 0.32], [0, y, 0])
       for (const x of [-0.14, 0.14]) meshes.box(lantern, 'lantern-frame', iron, [0.035, 0.4, 0.03], [x, 0, 0.13])
       const light = new THREE.PointLight('#ffc179', 14, 10, 2)
-      light.position.z = 0.25
+      light.position.set(0, 0, 0)
       lantern.add(light)
       this.lanterns.push({ light, material, phase: this.lanterns.length * 2.7 })
     }
@@ -277,7 +285,7 @@ export class Atmosphere {
       const minY = mesh.geometry.boundingBox?.min.y ?? 0
       const pivot = new THREE.Group()
       pivot.name = 'wind-pivot'
-      pivot.position.set(0, minY, 0).applyQuaternion(mesh.quaternion).add(mesh.position)
+      pivot.position.set(0, minY * mesh.scale.y, 0).applyQuaternion(mesh.quaternion).add(mesh.position)
       const position = mesh.position.clone()
       parent.add(pivot)
       pivot.add(mesh)

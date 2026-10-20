@@ -4,6 +4,7 @@ import { WORLD_LAYOUT } from './layout.ts'
 import { buildEnvironment } from './buildEnvironment.ts'
 import { auditGeometry, validateScenePlacements } from './sceneValidation.ts'
 import { disposeWorld, MeshLibrary } from './worldMeshes.ts'
+import { buildNature } from './buildNature.ts'
 
 describe('environment geometry', () => {
   it('builds grounded, separated entities with valid geometry and three empty artifact sites', () => {
@@ -154,5 +155,43 @@ describe('environment geometry', () => {
       expect(new THREE.Box3().setFromObject(upper, true).min.y - new THREE.Box3().setFromObject(lower, true).max.y).toBeLessThanOrEqual(0.001)
     }
     world.dispose()
+  })
+
+  it('builds a tapered, asymmetric dead tree with reused branch profiles and secondary twigs', () => {
+    const bark = new THREE.MeshStandardMaterial()
+    const tree = buildNature({ id: 'tree-test', kind: 'tree', position: { x: 0, z: 0 }, radius: 2, scale: 1, yaw: 0 }, new MeshLibrary(), {
+      stone: bark, trim: bark, slate: bark, dark: bark, bark, foliage: bark, rock: bark, brass: bark, lamp: bark,
+    })
+    try {
+      const trunk = tree.getObjectByName('dead-trunk')
+      const branches: THREE.Mesh[] = []
+      const twigs: THREE.Mesh[] = []
+      tree.traverse((object) => {
+        if (!(object instanceof THREE.Mesh)) return
+        if (object.name === 'dead-branch') branches.push(object)
+        if (object.name === 'dead-twig') twigs.push(object)
+      })
+      if (!(trunk instanceof THREE.Mesh)) throw new Error('Missing dead-tree trunk')
+      expect(branches.length).toBeGreaterThanOrEqual(12)
+      expect(twigs.length).toBeGreaterThanOrEqual(4)
+      expect(new Set(branches.map((branch) => branch.geometry)).size).toBeLessThan(branches.length)
+      expect(new Set(branches.map((branch) => branch.scale.y)).size).toBeGreaterThan(4)
+      const trunkPositions = trunk.geometry.getAttribute('position')
+      let maxY = -Infinity, minY = Infinity
+      for (let index = 0; index < trunkPositions.count; index += 1) {
+        maxY = Math.max(maxY, trunkPositions.getY(index))
+        minY = Math.min(minY, trunkPositions.getY(index))
+      }
+      const radii = (y: number) => {
+        let radius = 0
+        for (let index = 0; index < trunkPositions.count; index += 1) {
+          if (Math.abs(trunkPositions.getY(index) - y) > 0.001) continue
+          radius = Math.max(radius, Math.hypot(trunkPositions.getX(index), trunkPositions.getZ(index)))
+        }
+        return radius
+      }
+      expect(radii(minY)).toBeGreaterThan(radii(maxY))
+      expect(branches.some((branch) => branch.scale.y !== 1)).toBe(true)
+    } finally { disposeWorld(tree) }
   })
 })
