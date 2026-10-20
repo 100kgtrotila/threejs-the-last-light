@@ -6,6 +6,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 html, body, #app { width: 100%; height: 100%; margin: 0; }
 
@@ -30,9 +31,39 @@ h1 { font-size: clamp(28px, 4vw, 52px); font-weight: 400; letter-spacing: .03em;
 }
 .review-views a:hover, .review-views a:focus-visible { background: #29404a; outline: 2px solid #d8e4ce; outline-offset: 2px; }
 .phase-note { right: 28px; top: 24px; margin: 0; color: #d7ddd5; text-shadow: 0 2px 10px #061015; }
+.debug-legend { position: absolute; z-index: 1; right: 28px; top: 46px; margin: 0; color: #d7ddd5; font: 11px/1.6 system-ui, sans-serif; text-align: right; }
+
+.gameplay-ui { position: absolute; inset: 0; z-index: 2; pointer-events: none; font: 14px/1.5 system-ui, sans-serif; }
+.objective-card { position: absolute; top: 20px; right: 24px; width: min(360px, calc(100% - 32px)); padding: 16px 18px; background: #0b1822d9; border: 1px solid #8b9e9850; border-radius: 4px; }
+.objective-card p { margin: 0 0 6px; }
+#collection { font-size: 12px; color: #d7bf87; text-transform: capitalize; }
+#feedback { margin-bottom: 0; font-size: 12px; color: #b7c7c9; }
+.reticle { position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; border-radius: 50%; background: #fff4d5; box-shadow: 0 0 2px #071018; transform: translate(-50%, -50%); }
+.interaction-prompt { position: absolute; left: 16px; right: 16px; bottom: 90px; margin: 0; text-align: center; color: #fff2ce; text-shadow: 0 2px 5px #000; }
+.controls-hint { position: absolute; left: 24px; bottom: 18px; margin: 0; font-size: 12px; color: #d7dfda; text-shadow: 0 2px 6px #000; }
+.gameplay-ui[data-playing="false"] .reticle, .gameplay-ui[data-playing="false"] .interaction-prompt { display: none; }
+.pause-overlay { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; background: #051018b8; pointer-events: auto; }
+.render-failure { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; padding: 20px; background: #101c28; font: 14px/1.6 system-ui, sans-serif; }
+.pause-overlay.restoring { align-items: end; background: linear-gradient(transparent 55%, #07121bc9); }
+.restoring .modal-card { width: min(640px, 100%); padding: 22px 28px; }
+.restoring .modal-card > .muted { display: none; }
+.restoring #modal-title:focus { outline: none; }
+.modal-card { width: min(560px, 100%); max-height: calc(100svh - 40px); overflow-y: auto; padding: 32px; background: #13232bf5; border: 1px solid #a9b6a65c; border-radius: 5px; box-shadow: 0 15px 70px #0006; }
+.modal-card h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; }
+.modal-card p { margin: 16px 0; }
+.modal-card .eyebrow { margin-top: 0; font-size: 10px; }
+.modal-card button { border: 1px solid #c6b17d; color: #f8f0dc; background: #374a4c; font: inherit; padding: 10px 15px; border-radius: 3px; cursor: pointer; }
+.modal-card button:hover, .modal-card button:focus-visible { outline: 2px solid #edd396; outline-offset: 3px; background: #486061; }
+.modal-card button:disabled { opacity: .45; cursor: default; }
+.symbol-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.modal-card .muted { color: #b2c2c4; font-size: 12px; }
 
 @media (max-width: 700px) {
   .title-card { top: 16px; left: 16px; }
-  .phase-note { top: auto; bottom: 100px; left: 16px; right: 16px; }
+  .phase-note { display: none; }
+  .debug-legend { top: 118px; left: 16px; right: 16px; text-align: left; }
   .review-views { bottom: 16px; left: 16px; right: 16px; }
+  .objective-card { top: 12px; right: 12px; padding: 10px 12px; font-size: 12px; }
+  .controls-hint { left: 12px; right: 12px; bottom: 12px; font-size: 10px; }
+  .modal-card { padding: 22px; }
 }
