@@ -1,0 +1,235 @@
+[
+  {
+    "id": "rustic_stone_wall_02",
+    "page": "https://polyhaven.com/a/rustic_stone_wall_02",
+    "author": {
+      "Amal Kumar": "All"
+    },
+    "license": "CC0-1.0",
+    "licenseUrl": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "maps": [
+      {
+        "kind": "diff",
+        "file": "rustic_stone_wall_02_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rustic_stone_wall_02/rustic_stone_wall_02_diff_1k.jpg",
+        "bytes": 794327,
+        "md5": "9ca81a5ea589ea55a547bccc43c9df85"
+      },
+      {
+        "kind": "nor_gl",
+        "file": "rustic_stone_wall_02_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rustic_stone_wall_02/rustic_stone_wall_02_nor_gl_1k.jpg",
+        "bytes": 1191033,
+        "md5": "9612e01f923facfdd420fd7b811269b0"
+      },
+      {
+        "kind": "rough",
+        "file": "rustic_stone_wall_02_rough_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rustic_stone_wall_02/rustic_stone_wall_02_rough_1k.jpg",
+        "bytes": 517126,
+        "md5": "d5fad1c25c7bc87dd697d8491e43f9fc"
+      }
+    ]
+  },
+  {
+    "id": "mossy_rock",
+    "page": "https://polyhaven.com/a/mossy_rock",
+    "author": {
+      "Rob Tuytel": "All"
+    },
+    "license": "CC0-1.0",
+    "licenseUrl": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "maps": [
+      {
+        "kind": "diff",
+        "file": "mossy_rock_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_diff_1k.jpg",
+        "bytes": 1124438,
+        "md5": "a57fbbf55269eb64f8d40708fe3af26c"
+      },
+      {
+        "kind": "nor_gl",
+        "file": "mossy_rock_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+        "bytes": 995727,
+        "md5": "59370f9b3d068271c2bccfb414dc325b"
+      },
+      {
+        "kind": "rough",
+        "file": "mossy_rock_rough_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_rough_1k.jpg",
+        "bytes": 780918,
+        "md5": "7eadb38815ad2569104d827ad8ac1572"
+      }
+    ]
+  },
+  {
+    "id": "rocky_terrain",
+    "page": "https://polyhaven.com/a/rocky_terrain",
+    "author": {
+      "Amal Kumar": "All"
+    },
+    "license": "CC0-1.0",
+    "licenseUrl": "https://polyhaven.com/license",
+    "resolution": "1k",
+    "maps": [
+      {
+        "kind": "diff",
+        "file": "rocky_terrain_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_diff_1k.jpg",
+        "bytes": 905179,
+        "md5": "306ae62c38ab1942a63e831a534875ab"
+      },
+      {
+        "kind": "nor_gl",
+        "file": "rocky_terrain_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_nor_gl_1k.jpg",
+        "bytes": 1059194,
+        "md5": "4d42a558317f1d52c9080c73372d125a"
+      },
+      {
+        "kind": "rough",
+        "file": "rocky_terrain_rough_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_rough_1k.jpg",
+        "bytes": 439748,
+        "md5": "8c6721a31face834aee1616d2f8da3f7"
+      }
+    ]
+  },
+  {
+    "maps": [
+      {
+        "md5": "792d4f8467fe360092eee335ee60b698",
+        "file": "bark_willow_diff_1k.jpg",
+        "kind": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_willow/bark_willow_diff_1k.jpg",
+        "bytes": 779438
+      },
+      {
+        "md5": "91ffa6e3a1ba8cccb714908ef50122d5",
+        "file": "bark_willow_nor_gl_1k.jpg",
+        "kind": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_willow/bark_willow_nor_gl_1k.jpg",
+        "bytes": 1438304
+      },
+      {
+        "md5": "794115a3942e6e435274aabfa0967818",
+        "file": "bark_willow_rough_1k.jpg",
+        "kind": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_willow/bark_willow_rough_1k.jpg",
+        "bytes": 372597
+      }
+    ],
+    "resolution": "1k",
+    "author": {
+      "Dario Barresi": "Processing",
+      "Dimitrios Savva": "Photography"
+    },
+    "page": "https://polyhaven.com/a/bark_willow",
+    "id": "bark_willow",
+    "licenseUrl": "https://polyhaven.com/license",
+    "license": "CC0-1.0"
+  },
+  {
+    "maps": [
+      {
+        "md5": "e2fbdf7ed402e272e33e3f7ba707cf69",
+        "file": "weathered_brown_planks_diff_1k.jpg",
+        "kind": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_brown_planks/weathered_brown_planks_diff_1k.jpg",
+        "bytes": 226049
+      },
+      {
+        "md5": "1180a2ce3566529b25128252e02bd049",
+        "file": "weathered_brown_planks_nor_gl_1k.jpg",
+        "kind": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_brown_planks/weathered_brown_planks_nor_gl_1k.jpg",
+        "bytes": 223250
+      },
+      {
+        "md5": "4893f3ee360a4e1e30b96a157e65e50a",
+        "file": "weathered_brown_planks_rough_1k.jpg",
+        "kind": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_brown_planks/weathered_brown_planks_rough_1k.jpg",
+        "bytes": 234672
+      }
+    ],
+    "resolution": "1k",
+    "author": {
+      "Dimitrios Savva": "Photography",
+      "Rico Cilliers": "Processing"
+    },
+    "page": "https://polyhaven.com/a/weathered_brown_planks",
+    "id": "weathered_brown_planks",
+    "licenseUrl": "https://polyhaven.com/license",
+    "license": "CC0-1.0"
+  },
+  {
+    "maps": [
+      {
+        "md5": "476bff9959bc727bd4b83c0a9ac4aeaa",
+        "file": "rusty_metal_02_diff_1k.jpg",
+        "kind": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_02/rusty_metal_02_diff_1k.jpg",
+        "bytes": 564932
+      },
+      {
+        "md5": "8d6dc7e26f2708ec59e2a739711c612b",
+        "file": "rusty_metal_02_nor_gl_1k.jpg",
+        "kind": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_02/rusty_metal_02_nor_gl_1k.jpg",
+        "bytes": 403156
+      },
+      {
+        "md5": "888da78afd9bfc9fd3dafbbf2a5b8134",
+        "file": "rusty_metal_02_arm_1k.jpg",
+        "kind": "arm",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_02/rusty_metal_02_arm_1k.jpg",
+        "bytes": 153031
+      }
+    ],
+    "resolution": "1k",
+    "author": {
+      "Rob Tuytel": "All"
+    },
+    "page": "https://polyhaven.com/a/rusty_metal_02",
+    "id": "rusty_metal_02",
+    "licenseUrl": "https://polyhaven.com/license",
+    "license": "CC0-1.0"
+  },
+  {
+    "maps": [
+      {
+        "md5": "d3ea8fc962bbf54d66fc5723cd0096c1",
+        "file": "mud_forest_diff_1k.jpg",
+        "kind": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mud_forest/mud_forest_diff_1k.jpg",
+        "bytes": 952076
+      },
+      {
+        "md5": "6e2f0d15fdf402ca5221f63d0bfbeb60",
+        "file": "mud_forest_nor_gl_1k.jpg",
+        "kind": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mud_forest/mud_forest_nor_gl_1k.jpg",
+        "bytes": 1480930
+      },
+      {
+        "md5": "7e8295bca2f2e7fe13c09b9ab0d6f67d",
+        "file": "mud_forest_rough_1k.jpg",
+        "kind": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mud_forest/mud_forest_rough_1k.jpg",
+        "bytes": 251645
+      }
+    ],
+    "resolution": "1k",
+    "author": {
+      "eye-candy.xyz": "All"
+    },
+    "page": "https://polyhaven.com/a/mud_forest",
+    "id": "mud_forest",
+    "licenseUrl": "https://polyhaven.com/license",
+    "license": "CC0-1.0"
+  }
+]

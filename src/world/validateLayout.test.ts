@@ -20,13 +20,13 @@ describe('world layout', () => {
     const layout = structuredClone(WORLD_LAYOUT)
     layout.footprints.push({
       id: 'crowded-rock',
-      center: { x: 25.5, z: 5 },
+      center: { x: 1, z: -27 },
       radius: 1,
       solid: true,
     })
 
     expect(validateLayout(layout)).toContain(
-      'Solid footprints grove-tree and crowded-rock overlap',
+      'Solid footprints lighthouse-base and crowded-rock overlap',
     )
   })
 
